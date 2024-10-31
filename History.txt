@@ -1,0 +1,276 @@
+24  Start
+liqingyang      1400
+FuJiuRui        1400
+DongYiXuan      1400
+LiJiCi          1400
+ZhangYuShan     1400
+HuangJinYang    1400
+LvMingGe        1400
+ChenYuXiang     1400
+ZhouLeDa        1400
+ZhangJiaRui09   1400
+ZhangJianZhong  1400
+WangZeHao       1400 
+ShiYunHao09     1400 
+WangSiHan11     1400 
+LiZhaoYu        1400
+LiaoRuoChen     1400
+HePengYi        1400
+XieMingXi	  1400
+XiaoZhiYu       1400
+LiuXuanQi       1400
+ChenXiao        1400
+NieHongJie      1400
+ZengFanYu       1400
+LiXingCheng     1400
+
+24 240924    
+          liqingyang	1400 => 1552		Change: 152		Perf:  -- 
+            FuJiuRui	1400 => 1501		Change: 101		Perf: 1796
+          DongYiXuan	1400 => 1470		Change: 70		Perf: 1662
+              LiJiCi	1400 => 1448		Change: 48		Perf: 1577
+         ZhangYuShan	1400 => 1430		Change: 30		Perf: 1510
+        HuangJinYang	1400 => 1415		Change: 15		Perf: 1453
+         LiXingCheng	1400 => 1400		Change: 0		Perf: 0
+           ZengFanYu	1400 => 1400		Change: 0		Perf: 0
+          NieHongJie	1400 => 1400		Change: 0		Perf: 0
+            ChenXiao	1400 => 1400		Change: 0		Perf: 0
+           LiuXuanQi	1400 => 1400		Change: 0		Perf: 0
+           XiaoZhiYu	1400 => 1400		Change: 0		Perf: 0
+           XieMingXi	1400 => 1400		Change: 0		Perf: 0
+            HePengYi	1400 => 1400		Change: 0		Perf: 0
+         LiaoRuoChen	1400 => 1400		Change: 0		Perf: 0
+         ChenYuXiang	1400 => 1394		Change: -6		Perf: 1376
+            LvMingGe	1400 => 1394		Change: -6		Perf: 1376
+       ZhangJiaRui09	1400 => 1370		Change: -30		Perf: 1275
+            ZhouLeDa	1400 => 1370		Change: -30		Perf: 1275
+           WangZeHao	1400 => 1348		Change: -52		Perf: 1160
+      ZhangJianZhong	1400 => 1348		Change: -52		Perf: 1160
+         ShiYunHao09	1400 => 1331		Change: -69		Perf: 1040
+         WangSiHan11	1400 => 1320		Change: -80		Perf: 905
+            LiZhaoYu	1400 => 1309		Change: -91		Perf: -50
+
+23 240926
+          liqingyang	1552 => 1607		Change: 55		Perf: 1777
+         ChenYuXiang	1394 => 1563		Change: 169		Perf:  -- 
+        HuangJinYang	1415 => 1512		Change: 97		Perf: 1787
+         ZhangYuShan	1430 => 1472		Change: 42		Perf: 1586
+           LiuXuanQi	1400 => 1452		Change: 52		Perf: 1588
+          DongYiXuan	1470 => 1449		Change: -21		Perf: 1386
+              LiJiCi	1448 => 1448		Change: -0		Perf: 1445
+            FuJiuRui	1501 => 1445		Change: -56		Perf: 1251
+      ZhangJianZhong	1348 => 1417		Change: 69		Perf: 1590
+            ZhouLeDa	1370 => 1404		Change: 34		Perf: 1492
+           XieMingXi	1400 => 1400		Change: 0		Perf: 0
+            HePengYi	1400 => 1400		Change: 0		Perf: 0
+           ZengFanYu	1400 => 1400		Change: 0		Perf: 0
+         LiXingCheng	1400 => 1400		Change: 0		Perf: 0
+       ZhangJiaRui09	1370 => 1376		Change: 6		Perf: 1391
+         LiaoRuoChen	1400 => 1366		Change: -34		Perf: 1256
+         ShiYunHao09	1331 => 1333		Change: 2		Perf: 1337
+           XiaoZhiYu	1400 => 1329		Change: -71		Perf: 1017
+            LvMingGe	1394 => 1323		Change: -71		Perf: 1017
+          NieHongJie	1400 => 1316		Change: -84		Perf: 842
+            ChenXiao	1400 => 1308		Change: -92		Perf: -50
+           WangZeHao	1348 => 1303		Change: -45		Perf: 1147
+            LiZhaoYu	1309 => 1297		Change: -12		Perf: 1261
+         WangSiHan11	1320 => 1281		Change: -39		Perf: 1148
+
+
+23 240930
+          liqingyang	1607 => 1607		Change: 0		Perf: 0
+            FuJiuRui	1445 => 1599		Change: 154		Perf:  -- 
+         ChenYuXiang	1563 => 1582		Change: 19		Perf: 1639
+            ZhouLeDa	1404 => 1521		Change: 117		Perf: 1866
+      ZhangJianZhong	1417 => 1501		Change: 84		Perf: 1733
+              LiJiCi	1448 => 1470		Change: 22		Perf: 1532
+        HuangJinYang	1512 => 1459		Change: -53		Perf: 1284
+         ZhangYuShan	1472 => 1459		Change: -13		Perf: 1421
+          DongYiXuan	1449 => 1442		Change: -7		Perf: 1422
+           LiuXuanQi	1452 => 1421		Change: -31		Perf: 1325
+         ShiYunHao09	1333 => 1406		Change: 73		Perf: 1591
+           XieMingXi	1400 => 1400		Change: 0		Perf: 0
+            HePengYi	1400 => 1400		Change: 0		Perf: 0
+         LiXingCheng	1400 => 1400		Change: 0		Perf: 0
+         LiaoRuoChen	1366 => 1383		Change: 17		Perf: 1427
+           ZengFanYu	1400 => 1356		Change: -44		Perf: 1206
+            LvMingGe	1323 => 1353		Change: 30		Perf: 1429
+           WangZeHao	1303 => 1291		Change: -12		Perf: 1254
+       ZhangJiaRui09	1376 => 1285		Change: -91		Perf: -50
+          NieHongJie	1316 => 1281		Change: -35		Perf: 1165
+            ChenXiao	1308 => 1260		Change: -48		Perf: 1084
+           XiaoZhiYu	1329 => 1257		Change: -72		Perf: 911
+            LiZhaoYu	1297 => 1251		Change: -46		Perf: 1084
+         WangSiHan11	1281 => 1216		Change: -65		Perf: 914
+
+
+23 241009
+            FuJiuRui	1599 => 1647		Change: 48		Perf: 1795
+        HuangJinYang	1459 => 1615		Change: 156		Perf:  -- 
+          liqingyang	1607 => 1607		Change: 0		Perf: 0
+          DongYiXuan	1442 => 1537		Change: 95		Perf: 1809
+      ZhangJianZhong	1501 => 1527		Change: 26		Perf: 1600
+              LiJiCi	1470 => 1522		Change: 52		Perf: 1666
+            ZhouLeDa	1521 => 1495		Change: -26		Perf: 1415
+         ChenYuXiang	1582 => 1480		Change: -102		Perf: 1013
+         LiXingCheng	1400 => 1442		Change: 42		Perf: 1552
+         ZhangYuShan	1459 => 1439		Change: -20		Perf: 1379
+           XieMingXi	1400 => 1400		Change: 0		Perf: 0
+         LiaoRuoChen	1383 => 1364		Change: -19		Perf: 1307
+           LiuXuanQi	1421 => 1360		Change: -61		Perf: 1135
+           ZengFanYu	1356 => 1356		Change: 0		Perf: 0
+       ZhangJiaRui09	1285 => 1351		Change: 66		Perf: 1510
+         ShiYunHao09	1406 => 1347		Change: -59		Perf: 1136
+          NieHongJie	1281 => 1336		Change: 55		Perf: 1468
+            HePengYi	1400 => 1318		Change: -82		Perf: 935
+           XiaoZhiYu	1257 => 1273		Change: 16		Perf: 1313
+            LiZhaoYu	1251 => 1269		Change: 18		Perf: 1314
+            LvMingGe	1353 => 1264		Change: -89		Perf: 678
+           WangZeHao	1291 => 1256		Change: -35		Perf: 1142
+            ChenXiao	1260 => 1254		Change: -6		Perf: 1234
+         WangSiHan11	1216 => 1140		Change: -76		Perf: 689
+
+
+
+24 241011
+        HuangJinYang	1615 => 1737		Change: 122		Perf:  -- 
+            FuJiuRui	1647 => 1648		Change: 1		Perf: 1651
+          liqingyang	1607 => 1607		Change: 0		Perf: 0
+      ZhangJianZhong	1527 => 1562		Change: 35		Perf: 1661
+         ZhangYuShan	1439 => 1561		Change: 122		Perf: 1921
+         ChenYuXiang	1480 => 1559		Change: 79		Perf: 1784
+              LiJiCi	1522 => 1536		Change: 14		Perf: 1577
+          DongYiXuan	1537 => 1514		Change: -23		Perf: 1444
+            ZhouLeDa	1495 => 1504		Change: 9		Perf: 1531
+         LiXingCheng	1442 => 1434		Change: -8		Perf: 1411
+           XieMingXi	1400 => 1400		Change: 0		Perf: 0
+           LiuXuanQi	1360 => 1397		Change: 37		Perf: 1495
+       ZhangJiaRui09	1351 => 1358		Change: 7		Perf: 1378
+         LiaoRuoChen	1364 => 1340		Change: -24		Perf: 1263
+         ShiYunHao09	1347 => 1336		Change: -11		Perf: 1303
+           ZengFanYu	1356 => 1320		Change: -36		Perf: 1202
+            LiZhaoYu	1269 => 1290		Change: 21		Perf: 1345
+          NieHongJie	1336 => 1287		Change: -49		Perf: 1109
+           WangZeHao	1256 => 1244		Change: -12		Perf: 1208
+            HePengYi	1318 => 1234		Change: -84		Perf: 674
+            ChenXiao	1254 => 1222		Change: -32		Perf: 1114
+           XiaoZhiYu	1273 => 1216		Change: -57		Perf: 983
+            LvMingGe	1264 => 1185		Change: -79		Perf: 678
+         WangSiHan11	1140 => 1107		Change: -33		Perf: 995
+
+
+24 241014
+        HuangJinYang	1737 => 1730		Change: -7		Perf: 1708
+          DongYiXuan	1514 => 1675		Change: 161		Perf:  -- 
+            FuJiuRui	1648 => 1649		Change: 1		Perf: 1652
+            ZhouLeDa	1504 => 1616		Change: 112		Perf: 1953
+          liqingyang	1607 => 1607		Change: 0		Perf: 0
+         ChenYuXiang	1559 => 1558		Change: -1		Perf: 1554
+              LiJiCi	1536 => 1554		Change: 18		Perf: 1605
+      ZhangJianZhong	1562 => 1525		Change: -37		Perf: 1410
+         ZhangYuShan	1561 => 1490		Change: -71		Perf: 1240
+         ShiYunHao09	1336 => 1474		Change: 138		Perf: 1823
+         LiXingCheng	1434 => 1445		Change: 11		Perf: 1476
+           XieMingXi	1400 => 1400		Change: 0		Perf: 0
+          LiChengHao	1400 => 1400		Change: 0		Perf: 0
+       ZhangJiaRui09	1358 => 1375		Change: 17		Perf: 1421
+           LiuXuanQi	1397 => 1370		Change: -27		Perf: 1286
+            LiYiZe09	1400 => 1355		Change: -45		Perf: 1205
+            YaoXinYu	1400 => 1347		Change: -53		Perf: 1162
+           ZengFanYu	1320 => 1332		Change: 12		Perf: 1366
+            LiZhaoYu	1290 => 1301		Change: 11		Perf: 1330
+            LvMingGe	1185 => 1290		Change: 105		Perf: 1527
+         LiaoRuoChen	1340 => 1277		Change: -63		Perf: 1031
+            HePengYi	1234 => 1234		Change: 0		Perf: 0
+          NieHongJie	1287 => 1218		Change: -69		Perf: 915
+            ChenXiao	1222 => 1198		Change: -24		Perf: 1124
+           XiaoZhiYu	1216 => 1176		Change: -40		Perf: 1040
+           WangZeHao	1244 => 1170		Change: -74		Perf: 783
+         WangSiHan11	1107 => 1030		Change: -77		Perf: -149
+
+
+25 241016
+        HuangJinYang	1730 => 1743		Change: 13		Perf: 1781
+         ShiYunHao09	1474 => 1646		Change: 172		Perf:  -- 
+          DongYiXuan	1675 => 1614		Change: -61		Perf: 1423
+          liqingyang	1607 => 1607		Change: 0		Perf: 0
+              LiJiCi	1554 => 1539		Change: -15		Perf: 1492
+            FuJiuRui	1649 => 1528		Change: -121		Perf: 989
+            ZhouLeDa	1616 => 1528		Change: -88		Perf: 1212
+           LiuXuanQi	1370 => 1526		Change: 156		Perf: 1945
+         LiXingCheng	1445 => 1521		Change: 76		Perf: 1718
+         ZhangYuShan	1490 => 1518		Change: 28		Perf: 1592
+      ZhangJianZhong	1525 => 1479		Change: -46		Perf: 1333
+         ChenYuXiang	1558 => 1442		Change: -116		Perf: 868
+           XieMingXi	1400 => 1400		Change: 0		Perf: 0
+          NieHongJie	1218 => 1355		Change: 137		Perf: 1658
+            LiYiZe09	1355 => 1352		Change: -3		Perf: 1342
+            LvMingGe	1290 => 1335		Change: 45		Perf: 1443
+          LiChengHao	1400 => 1331		Change: -69		Perf: 1084
+            LiZhaoYu	1301 => 1314		Change: 13		Perf: 1345
+            ChenXiao	1198 => 1310		Change: 112		Perf: 1553
+            YaoXinYu	1347 => 1298		Change: -49		Perf: 1136
+       ZhangJiaRui09	1375 => 1271		Change: -104		Perf: 606
+           ZengFanYu	1332 => 1262		Change: -70		Perf: 999
+            HePengYi	1234 => 1234		Change: 0		Perf: 0
+           XiaoZhiYu	1176 => 1206		Change: 30		Perf: 1274
+         LiaoRuoChen	1277 => 1183		Change: -94		Perf: 611
+           WangZeHao	1170 => 1170		Change: 0		Perf: 0
+         WangSiHan11	1030 => 1085		Change: 55		Perf: 1199
+
+27 241023
+        HuangJinYang	1743 => 1846		Change: 103		Perf:  -- 
+         ShiYunHao09	1646 => 1686		Change: 40		Perf: 1807
+         LiXingCheng	1521 => 1629		Change: 108		Perf: 1957
+          DongYiXuan	1614 => 1624		Change: 10		Perf: 1653
+          liqingyang	1607 => 1607		Change: 0		Perf: 0
+            FuJiuRui	1528 => 1528		Change: 0		Perf: 0
+      ZhangJianZhong	1479 => 1512		Change: 33		Perf: 1605
+            ZhouLeDa	1528 => 1511		Change: -17		Perf: 1460
+              LiJiCi	1539 => 1510		Change: -29		Perf: 1418
+          NieHongJie	1355 => 1463		Change: 108		Perf: 1738
+         ZhangYuShan	1518 => 1459		Change: -59		Perf: 1256
+         ChenYuXiang	1442 => 1442		Change: 0		Perf: 0
+           LiuXuanQi	1526 => 1418		Change: -108		Perf: 778
+           XieMingXi	1400 => 1400		Change: 0		Perf: 0
+            LiZhaoYu	1314 => 1377		Change: 63		Perf: 1539
+            LvMingGe	1335 => 1349		Change: 14		Perf: 1389
+           ZengFanYu	1262 => 1343		Change: 81		Perf: 1541
+            LiYiZe09	1352 => 1312		Change: -40		Perf: 1176
+            YaoXinYu	1298 => 1301		Change: 3		Perf: 1309
+       ZhangJiaRui09	1271 => 1260		Change: -11		Perf: 1227
+            HePengYi	1234 => 1234		Change: 0		Perf: 0
+          LiChengHao	1331 => 1233		Change: -98		Perf: -30
+            ChenXiao	1310 => 1213		Change: -97		Perf: -30
+         LiaoRuoChen	1183 => 1172		Change: -11		Perf: 1138
+           XiaoZhiYu	1206 => 1151		Change: -55		Perf: 927
+           WangZeHao	1170 => 1136		Change: -34		Perf: 1017
+         WangSiHan11	1085 => 1086		Change: 1		Perf: 1090
+
+        HuangJinYang	1743 => 1846		Change: 103		Perf:  -- 
+         LiXingCheng	1521 => 1629		Change: 108		Perf: 1957
+         ShiYunHao09	1646 => 1686		Change: 40		Perf: 1807
+          NieHongJie	1355 => 1463		Change: 108		Perf: 1738
+          DongYiXuan	1614 => 1624		Change: 10		Perf: 1653
+      ZhangJianZhong	1479 => 1512		Change: 33		Perf: 1605
+           ZengFanYu	1262 => 1343		Change: 81		Perf: 1541
+            LiZhaoYu	1314 => 1377		Change: 63		Perf: 1539
+            ZhouLeDa	1528 => 1511		Change: -17		Perf: 1460
+              LiJiCi	1539 => 1510		Change: -29		Perf: 1418
+            LvMingGe	1335 => 1349		Change: 14		Perf: 1389
+            YaoXinYu	1298 => 1301		Change: 3		Perf: 1309
+         ZhangYuShan	1518 => 1459		Change: -59		Perf: 1256
+       ZhangJiaRui09	1271 => 1260		Change: -11		Perf: 1227
+            LiYiZe09	1352 => 1312		Change: -40		Perf: 1176
+         LiaoRuoChen	1183 => 1172		Change: -11		Perf: 1138
+         WangSiHan11	1085 => 1086		Change: 1		Perf: 1090
+           WangZeHao	1170 => 1136		Change: -34		Perf: 1017
+           XiaoZhiYu	1206 => 1151		Change: -55		Perf: 927
+           LiuXuanQi	1526 => 1418		Change: -108		Perf: 778
+          LiChengHao	1331 => 1233		Change: -98		Perf: -30
+            ChenXiao	1310 => 1213		Change: -97		Perf: -30
+          liqingyang	1607 => 1607		Change: 0		Perf: 0
+            FuJiuRui	1528 => 1528		Change: 0		Perf: 0
+         ChenYuXiang	1442 => 1442		Change: 0		Perf: 0
+           XieMingXi	1400 => 1400		Change: 0		Perf: 0
+            HePengYi	1234 => 1234		Change: 0		Perf: 0
