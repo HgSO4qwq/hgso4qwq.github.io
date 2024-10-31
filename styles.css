@@ -41,3 +41,11 @@ td{
 th{
     width: 75px;
 }
+
+
+@font-face {
+    font-family: "Cascadia Code";
+    src: url(./CascadiaCode.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
