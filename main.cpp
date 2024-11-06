@@ -48,6 +48,7 @@ string Ratcol(int x)
 }
 
 string bllk(string s) {return "<td style=\"text-align: center;\"><span style=\"color:black;font-size: 15px;\">"+s+"</span></td>\n";}
+string bllk2(string s) {return "<td style=\"text-align: center;\"><span style=\"color:black;font-size: 15px;\"><a href=\"/"+s+"\">"+s+"</a></span></td>\n";}
 
 int main()
 {
@@ -70,7 +71,7 @@ int main()
     for(int i=1;i<=n;i++)
     {
         s+="<tbody><tr>";
-        string nam;cin>>nam;s+=bllk(nam);
+        string nam;cin>>nam;s+=bllk2(nam);
         int old,neew,Delt,perf;double seed;cin>>old>>neew>>Delt>>perf>>seed;
         s+=Ratcol(old);s+=Ratcol(neew);s+=Delta(Delt);s+=Ratcol(perf);
         s+=bllk((perf<=-1e5?" -- ":wyswd(seed)));
