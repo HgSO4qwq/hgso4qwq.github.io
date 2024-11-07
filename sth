@@ -1,0 +1,138 @@
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+unordered_map<string,double>rating;
+vector<vector<pair<string,int>>>vec;
+int main(){
+	ifstream fin("rank.txt");
+	while(1){
+		string S;fin>>S;
+		if(S=="END")break;
+		vector<pair<string,int>>nwv;
+		while(1){
+			string str;
+			fin>>str;
+			if(str=="end")break;
+			int score;fin>>score;
+			nwv.push_back({str,score});
+		}
+		vec.push_back(nwv);
+	}
+	vec.pop_back();
+	fin.close();
+	reverse(vec.begin(),vec.end());
+	ofstream fout("rating.txt");
+	for(auto V:vec){
+		for(auto i:V)if(!rating[i.first])rating[i.first]=1400;
+		unordered_map<string,double>newrating;
+		for(int i=1;i<V.size();++i){
+			for(int j=0;j<i;++j){
+				string A=V[i].first,B=V[j].first;
+				int va=V[i].second,vb=V[j].second;
+				double ra=rating[A],rb=rating[B],sa,sb;
+				double EA=1.0/(1+pow(10,(rb-ra)/400)),EB=1.0/(1+pow(10,(ra-rb)/400));
+				if(va==vb)sa=sb=0.5;
+				else if(va<vb)sa=0,sb=1;
+				else sa=1,sb=0;
+				newrating[A]+=ra+128*cbrt(sa-EA);
+				newrating[B]+=rb+128*cbrt(sb-EB);
+			}
+		}
+		for(auto i:newrating)rating[i.first]=i.second/(V.size()-1);
+		vector<pair<double,string>>v;
+		for(auto i:rating)v.push_back({-i.second,i.first});
+		sort(v.begin(),v.end());
+		for(auto i:v)fout<<-i.first<<" "<<i.second<<endl;
+		fout<<endl;
+	}
+	return 0;
+}
+```
+
+```js
+// ==UserScript==
+// @name         jifang rating
+// @namespace    http://tampermonkey.net/
+// @version      2024-10-11
+// @description  try to take over the world!
+// @author       You
+// @match        https://sy.hhwdd.com/new/user/myassignments.page
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=hhwdd.com
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    function download(filename, text) {
+  var element = document.createElement('a');
+  element.style.display = 'none';
+
+  var content = encodeURIComponent(text);
+  element.setAttribute('href', `data:text/plain;charset=utf-8,${content}`);
+  element.setAttribute('download', filename);
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+}
+async function fetchData(){
+    'use strict';
+    var ansans="";
+    const resp=await fetch("https://sy.hhwdd.com/assignment.MyAssignments.dt", {
+    "credentials": "include",
+    "headers": {
+        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:97.0) Gecko/20100101 Firefox/97.0",
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Accept-Language": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "X-Requested-With": "XMLHttpRequest",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+        "Pragma": "no-cache",
+        "Cache-Control": "no-cache"
+    },
+    "referrer": "https://sy.hhwdd.com/new/user/myassignments.page",
+    "body": "alldomain=no&domain=1712&userid=&login=&keys=&page=1&donefilter=",
+    "method": "POST",
+    "mode": "cors"
+});
+const data=await resp.json();
+    const obj=JSON.parse(JSON.stringify(data));
+        for(var i=0;i<obj.cnt;++i){
+            const resp1=await fetch("https://sy.hhwdd.com/assignment.StatAssignment.dt", {
+    "credentials": "include",
+    "headers": {
+        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:97.0) Gecko/20100101 Firefox/97.0",
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Accept-Language": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "X-Requested-With": "XMLHttpRequest",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+        "Pragma": "no-cache",
+        "Cache-Control": "no-cache"
+    },
+    "referrer": "https://sy.hhwdd.com/new/domain/StatAssignment.page?assignId=6si2l4f",
+    "body": "assignid="+obj[i].aid+"&cmd=stat",
+    "method": "POST",
+    "mode": "cors"
+});
+		const DATA=await resp1.json();
+		const jstr=JSON.stringify(DATA);
+		const obj1=JSON.parse(jstr);
+        ansans+="start\n";
+		for(var k in obj1){
+			if(obj1[k].login!=undefined&&obj1[k].tsubmit_inexam>0){
+				ansans+=obj1[k].login+"\n";
+				ansans+=obj1[k].tscore_inexam+"\n";
+			}
+		}
+		ansans+="end\n";
+	}
+    ansans+="END\n";
+    download("rank.txt",ansans);
+}
+fetchData();
+})();
+```
+```

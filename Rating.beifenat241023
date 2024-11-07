@@ -1,0 +1,147 @@
+#include<iostream>
+#include<cmath>
+#include<algorithm>
+#include<map>
+using namespace std;
+
+const int MXN=100010;
+map<string,int> studentNumber;
+map<int,string> studentName;
+double oldRating[MXN],newRating[MXN];
+int numberOfStudents,curNumStudents;
+double curContestRank[MXN];
+int isInContest[MXN],contestNumber[MXN];
+double Seed[MXN],perf[MXN];
+
+double Prob(double RatingA,double RatingB)
+{
+    // cout<<RatingA<<' '<<RatingB<<endl;
+    return (double)1/((double)1+pow(10,(double)((RatingB-RatingA)/400)));
+}
+
+struct node {string s;double oR,r;double perf;double ori;}a[MXN];
+bool cmp(node a,node b) {return a.r>b.r;}
+
+int main()
+{
+    freopen("Rating.in","r",stdin);
+    freopen("Rating.out","w",stdout);
+    cin>>numberOfStudents;
+    for(int i=1;i<=numberOfStudents;i++)
+    {
+        double Rating;
+        string thisStudentName;
+        cin>>thisStudentName;
+        cin>>Rating;
+        studentNumber[thisStudentName]=i;
+        oldRating[i]=newRating[i]=Rating;
+        studentName[i]=thisStudentName;
+        // cout<<Rating<<endl;
+    }
+    cin>>curNumStudents;
+    for(int i=1;i<=curNumStudents;i++)
+    {
+        string studentName;
+        int Score;double Rank;
+        cin>>Rank>>studentName;Score=100-Rank;
+        int idOfStudent=studentNumber[studentName];
+        isInContest[idOfStudent]=i;
+        contestNumber[i]=idOfStudent;
+        curContestRank[i]=Rank;
+        // cout<<studentName<<'\t'<<Score<<'\t'<<Rank<<'\t'<<contestNumber[i]<<endl;
+    }
+    // for(int i=1;i<=curNumStudents;i++) cout<<contestNumber[i]<<' '<<newRating[contestNumber[i]]<<' '<<oldRating[contestNumber[i]]<<endl; 
+    for(int i=1;i<=curNumStudents;i++)
+    {
+        Seed[i]=1;
+        for(int j=1;j<=curNumStudents;j++)
+        {
+            if(i==j) continue;
+            int idj=contestNumber[j];
+            int idi=contestNumber[i];
+            Seed[i]+=Prob(oldRating[idj],oldRating[idi]);
+        }
+        Seed[i]=sqrt(Seed[i]*curContestRank[i]);
+        // cout<<studentName[i]<<"\t\t"<<Seed[i]<<endl;
+        double l=-114,r=19198,eps=0.00001;
+        while(r-l>=eps)
+        {
+            double mid=(l+r)/2;
+            double nwSeed=1;
+            for(int j=1;j<=curNumStudents;j++)
+            {
+                if(i==j) continue;
+                int idj=contestNumber[j];
+                int idi=contestNumber[i];
+                nwSeed+=Prob(oldRating[idj],mid);
+            }
+            // cout<<i<<' '<<mid<<' '<<nwSeed<<endl;
+            if(nwSeed<curContestRank[i]) r=mid;
+            else l=mid;
+        }
+        // cout<<l<<endl;
+        int idi=contestNumber[i];
+        perf[idi]=l;
+        if(l>=4500) perf[idi]=4000;
+    }
+    for(int i=1;i<=curNumStudents;i++)
+    {
+        // cout<<studentName[i]<<"\t\t"<<Seed[i]<<endl;
+        double l=-114,r=19198,eps=0.00001;
+        while(r-l>=eps)
+        {
+            double mid=(l+r)/2;
+            double nwSeed=1;
+            for(int j=1;j<=curNumStudents;j++)
+            {
+                if(i==j) continue;
+                int idj=contestNumber[j];
+                int idi=contestNumber[i];
+                nwSeed+=Prob(oldRating[idj],mid);
+            }
+            // cout<<i<<' '<<mid<<' '<<nwSeed<<endl;
+            if(nwSeed<Seed[i]) r=mid;
+            else l=mid;
+        }
+        // cout<<l<<endl;
+        int idi=contestNumber[i];
+        double delt=(l-oldRating[idi])/2;
+        newRating[idi]=oldRating[idi]+delt;
+    }long double delt=0;
+    // for(int i=1;i<=curNumStudents;i++) cout<<newRating[contestNumber[i]]<<' '<<oldRating[contestNumber[i]]<<endl; 
+    for(int i=1;i<=numberOfStudents;i++) delt+=newRating[i]-oldRating[i]; 
+    for(int i=1;i<=curNumStudents;i++) 
+    {
+        newRating[contestNumber[i]]-=delt/curNumStudents;
+        perf[contestNumber[i]]-=4*delt/curNumStudents;
+    }
+    long double sum=0; cout<<delt<<endl;
+    for(int i=1;i<=numberOfStudents;i++)
+    {
+        // sum+=newRating[i];
+        a[i]={studentName[i],oldRating[i],newRating[i],perf[i],oldRating[i]};
+    }sort(a+1,a+numberOfStudents+1,cmp);
+    for(int i=1;i<=numberOfStudents;i++) 
+    {
+        printf("%20s\t%.0lf => %.0lf\t\tChange: %.0lf\t\tPerf: %.0lf\n",a[i].s.c_str(),a[i].oR,a[i].r,a[i].r-a[i].ori,a[i].perf);
+        // cout<<a[i].r<<"\t\t"<<a[i].r-a[i].ori<<'\t'<<"Perf: "<<a[i].perf<<endl;
+    }
+    freopen("Rating.ans","w",stdout);
+    for(int i=1;i<=numberOfStudents;i++) 
+    {
+        printf("%20s\t%.0lf\n",a[i].s.c_str(),a[i].r);
+    }
+    return 0;
+}
+
+/*
+Input:
+n: Number of registered contestants
+Name Rating (Example: ChenYuXiang 1874)
+m: Number of this contest's contestants
+Name Score Rank (Example: ZhouLeDa 182 5) Sorted
+
+Output:
+n: Number of registered contestants
+Name afterRating (Example: ChenYuXiang 1833)
+*/
