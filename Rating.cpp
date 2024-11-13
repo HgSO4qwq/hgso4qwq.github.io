@@ -5,6 +5,7 @@
 #include<vector>
 #include<map>
 using namespace std;
+#define debug 1
 
 const int MXN=110;
 map<string,int> studentNumber;
@@ -21,7 +22,21 @@ node history[MXK][MXN];string Date[MXK];
 double historyRating[MXN][MXN];
 bool cmp(node a,node b) {return a.r>b.r;}
 
-int main()
+double botps[12]={0,0.417,0.540,0.635,0.712,0.776,0.832,0.881,0.924,0.964,1},botn=9;
+string botnm[13]={
+    "",
+    "bot1",
+    "bot2",
+    "bot3",
+    "bot4",
+    "bot5",
+    "bot6",
+    "bot7",
+    "bot8",
+    "bot9",
+    "bot10"};
+
+signed main()
 {
     int tototot=0;
     // freopen("contestant.in","r",stdin);
@@ -67,19 +82,42 @@ int main()
         memset(curContestRank,0,sizeof curContestRank);
         tototot++;
         cin>>Date[tototot];int TP=0;
+        int pt=0;
         for(int i=1;i<=curNumStudents;i++)
         {
             string studentName;
             int Score;double Rank;
             cin>>Rank>>studentName;Score=100-Rank;
+
             if(studentName=="ShiYunHao09") {TP++;continue;}
-            cout<<Rank<<' '<<studentName<<endl;Rank-=TP;
+            
+            if(pt<botn&&Rank>=botps[pt+1]*curNumStudents)
+            {
+                pt++;
+                cout<<botps[pt]*curNumStudents<<' '<<botnm[pt]<<endl;
+                int idOfStudent=studentNumber[botnm[pt]];
+                isInContest[idOfStudent]=i-TP;
+                contestNumber[i-TP]=idOfStudent;
+                curContestRank[i-TP]=Rank;
+                TP--;
+            }
+            cout<<Rank-TP<<' '<<studentName<<endl;Rank-=TP;
             int idOfStudent=studentNumber[studentName];
             isInContest[idOfStudent]=i-TP;
             contestNumber[i-TP]=idOfStudent;
             curContestRank[i-TP]=Rank;
-        }curNumStudents-=TP;
-
+        }
+        while(pt!=botn)
+        {
+            pt++;
+            cout<<botps[pt]*curNumStudents-TP<<' '<<botnm[pt]<<endl;
+            int idOfStudent=studentNumber[botnm[pt]];
+            isInContest[idOfStudent]=curNumStudents-TP;
+            contestNumber[curNumStudents-TP]=idOfStudent;
+            curContestRank[curNumStudents-TP]=Rank;
+            TP--;
+        }
+        curNumStudents-=TP;
         // Perf Calculation
         for(int i=1;i<=curNumStudents;i++)
         {
@@ -156,9 +194,11 @@ int main()
     freopen("Rating_for_iter.deprecated","w",stdout);
     for(int i=1;i<=numberOfStudents;i++) printf("%20s\t%.0lf\n",a[i].s.c_str(),a[i].r);
     freopen("Rating.board","w",stdout);
-    cout<<numberOfStudents<<endl;
+    if(debug) cout<<numberOfStudents<<endl;
+    else cout<<numberOfStudents-10<<endl;
     for(int i=1;i<=numberOfStudents;i++) 
     {
+        if((!debug)&&a[i].s.substr(0,3)=="bot") continue;
         printf("%s %.0lf %.0lf %.0lf %.0lf %.2lf\n"
             ,a[i].s.c_str(),double(int(a[i].oR)),double(int(a[i].r)),double((int)a[i].r-(int)a[i].oR),a[i].perf,a[i].seed);
     }
@@ -166,6 +206,7 @@ int main()
     node b[MXN];
     for(int i=1;i<=tototot;i++)
     {
+        if((!debug)&&a[i].s.substr(0,3)=="bot") continue;
         // b=history[i];
         auto *b=history[i];
         for(int j=1;j<=numberOfStudents;j++) 
@@ -176,8 +217,10 @@ int main()
             if(b[j].perf<=-1e5) historyRating[i][j]=-1e5;
         }
     }int lt=initRating;
+    return 0; // // // // // // // // // // /// // // // / // // /// // // // // // // // // // // // // // // // /
     for(int i=1;i<=numberOfStudents;i++)
     {
+        if((!debug)&&studentName[i].substr(0,3)=="bot") continue;
         system(("mkdir "+studentName[i]).c_str());
         freopen(("./graph_csv/"+studentName[i]+".csv").c_str(),"w",stdout);
         cout<<"Date,Rating\n";
