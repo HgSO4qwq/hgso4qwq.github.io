@@ -66,18 +66,19 @@ int main()
         memset(contestNumber,0,sizeof contestNumber);
         memset(curContestRank,0,sizeof curContestRank);
         tototot++;
-        cin>>Date[tototot];
+        cin>>Date[tototot];int TP=0;
         for(int i=1;i<=curNumStudents;i++)
         {
             string studentName;
             int Score;double Rank;
             cin>>Rank>>studentName;Score=100-Rank;
-            cout<<Rank<<' '<<studentName<<endl;
+            if(studentName=="ShiYunHao09") {TP++;continue;}
+            cout<<Rank<<' '<<studentName<<endl;Rank-=TP;
             int idOfStudent=studentNumber[studentName];
-            isInContest[idOfStudent]=i;
-            contestNumber[i]=idOfStudent;
-            curContestRank[i]=Rank;
-        }
+            isInContest[idOfStudent]=i-TP;
+            contestNumber[i-TP]=idOfStudent;
+            curContestRank[i-TP]=Rank;
+        }curNumStudents-=TP;
 
         // Perf Calculation
         for(int i=1;i<=curNumStudents;i++)
