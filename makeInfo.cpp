@@ -81,7 +81,7 @@ int main(int argc,char *argv[])
     lim[++Llim]={1950,2550,"#FF000085","#FF0000","Superman","SM"};
     pair<string,string> YouSIR,YouMAXSIR;
     for(int i=1;i<=Llim;i++) if(lim[i].L<=R[n]&&R[n]<=lim[i].R) YouSIR={lim[i].c2,lim[i].rnknm};
-    for(int i=1;i<=Llim;i++) if(lim[i].L<=rrrrr&&rrrrr<=lim[i].R) YouMAXSIR={lim[i].c2,lim[i].rnknm};
+    for(int i=1;i<=Llim;i++) if(lim[i].L<=rrrrr&&rrrrr<=lim[i].R) YouMAXSIR={lim[i].c2,lim[i].sx};
 
 
 
