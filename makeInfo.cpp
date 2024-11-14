@@ -8,7 +8,7 @@ const int N=100010,C=Llim;
 string Date[N];double R[N];
 ll T[N];
 struct Pt {double x,y;}P[N];
-struct node2 {int L,R;string c,c2,rnknm;}lim[N];
+struct node2 {int L,R;string c,c2,rnknm,sx;}lim[N];
 
 void init(string nam) {cout<<"                var "<<nam<<" = c.getContext(\"2d\");\n";}
 void colb(string nam,string col,Pt ul,Pt dr)
@@ -71,14 +71,14 @@ int main(int argc,char *argv[])
         cerr<<'('<<T[i]<<','<<R[i]<<")->("<<P[i].x<<','<<P[i].y<<')'<<endl;
     }
     int Llim=0;
-    lim[++Llim]={   1, 850,"#80808085","#808080","Retard"};
-    lim[++Llim]={ 850,1100,"#80400085","#804000","Newbie"};
-    lim[++Llim]={1100,1300,"#00800085","#008000","Pupil"};
-    lim[++Llim]={1300,1400,"#03A89E85","#03A89E","Specialist"};
-    lim[++Llim]={1400,1550,"#0000FF85","#0000FF","Expert"};
-    lim[++Llim]={1550,1750,"#AA00AA85","#AA00AA","Candidate Mastar"};
-    lim[++Llim]={1750,1950,"#FF8C0085","#FF8C00","Mastar"};
-    lim[++Llim]={1950,2550,"#FF000085","#FF0000","Superman"};
+    lim[++Llim]={   1, 850,"#80808085","#808080","Retard","R"};
+    lim[++Llim]={ 850,1100,"#80400085","#804000","Newbie","N"};
+    lim[++Llim]={1100,1300,"#00800085","#008000","Pupil","P"};
+    lim[++Llim]={1300,1400,"#03A89E85","#03A89E","Specialist","S"};
+    lim[++Llim]={1400,1550,"#0000FF85","#0000FF","Expert","E"};
+    lim[++Llim]={1550,1750,"#AA00AA85","#AA00AA","Candidate Mastar","CM"};
+    lim[++Llim]={1750,1950,"#FF8C0085","#FF8C00","Mastar","M"};
+    lim[++Llim]={1950,2550,"#FF000085","#FF0000","Superman","SM"};
     pair<string,string> YouSIR,YouMAXSIR;
     for(int i=1;i<=Llim;i++) if(lim[i].L<=R[n]&&R[n]<=lim[i].R) YouSIR={lim[i].c2,lim[i].rnknm};
     for(int i=1;i<=Llim;i++) if(lim[i].L<=rrrrr&&rrrrr<=lim[i].R) YouMAXSIR={lim[i].c2,lim[i].rnknm};
