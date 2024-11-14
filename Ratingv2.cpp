@@ -5,7 +5,9 @@
 #include<vector>
 #include<map>
 using namespace std;
-#define debug 1
+#define displaybots 0
+#define onlythefirstcontest 0
+#define generate 1
 
 const int MXN=110;
 map<string,int> studentNumber;
@@ -37,47 +39,31 @@ string botnm[13]={
     "bot10"};
 
 const int N=MXN;
-vector<int> paimon[N];
+vector<string> paimon[N];
 
 signed main()
 {
     int tototot=0;
-    // freopen("contestant.in","r",stdin);
-    // FILE *inF=fopen("contestant.in","r");
     freopen("compete.in","r",stdin);
-    // fscanf(inF,"%d",&numberOfStudents);
     cin>>numberOfStudents;
     for(int i=1;i<=numberOfStudents;i++)
     {
         double Rating;
         string thisStudentName;
-        // thisStudentName.resize(50);
-        // fscanf(inF,"%s",&thisStudentName[0]);
         cin>>thisStudentName;
-        // system("cd name");
         system(("touch ./name/"+thisStudentName).c_str());
-        // system("cd ..");
         freopen(("./name/"+thisStudentName).c_str(),"w",stdout);
         cout<<thisStudentName<<endl;
-        // cin>>Rating;
-        // string sss="";
-        // for(int _=0;_<=50;_++) 
-        // {
-        //     sss+=thisStudentName[_];
-        //     if(thisStudentName[_]=='\0') break;
-        // }
-        // cout<<sss<<endl;
         Rating=initRating;
         studentNumber[thisStudentName]=i;
         oldRating[i]=newRating[i]=Rating;
         studentName[i]=thisStudentName;
-    }// fclose(inF); 
+    }
     freopen("Rating.out","w",stdout);
-    // freopen("compete.in","r",stdin);
-    // (cin>>curNumStudents);
-    // cout<<curNumStudents<<endl;
-    int T=1000;cin>>Date[0];
-    while((cin>>curNumStudents)&&T--)
+    cin>>Date[0];
+    int T=1e6;
+    if(onlythefirstcontest) T=1;
+    while(cin>>curNumStudents&&T--)
     {
         memset(perf,-0x3f,sizeof perf);
         memset(isInContest,0,sizeof isInContest);
@@ -85,22 +71,35 @@ signed main()
         memset(curContestRank,0,sizeof curContestRank);
         tototot++;
         cin>>Date[tototot];int TP=0;
-        int pt=0,diffpbs=0,lt=0;
+        int pt=0,diffpbs=0,lt=0;cout<<"num: "<<curNumStudents<<endl;
         for(int i=1;i<=curNumStudents;i++)
         {
             string studentName;
             int Score;double Rank;
             cin>>Rank>>studentName;
-            if(studentName=="ShiYunHao09") continue;
+            if(studentName=="ShiYunHao09") {continue;}
             if(Rank==lt) paimon[diffpbs].push_back(studentName);
             else paimon[++diffpbs].push_back(studentName);
         }
-        int rL=0,rR=0;
+        int rL=0,rR=0;curNumStudents=0;
         for(int i=1;i<=diffpbs;i++)
         {
             rL=rR+1;
-            rR=rL+paimon[diffpbs].size();
+            rR=rL+paimon[i].size()-1;
+            curNumStudents+=paimon[i].size();
+            string studentName;
             double avrk=(rL+rR)/2;
+            for(auto u:paimon[i])
+            {
+                studentName=u;
+                double Rank=avrk;
+                cout<<Rank<<' '<<studentName<<endl;
+                int idOfStudent=studentNumber[studentName];
+                isInContest[idOfStudent]=i;
+                contestNumber[i]=idOfStudent;
+                curContestRank[i]=Rank;
+            }
+            paimon[i].clear();
         }
 
 
@@ -180,11 +179,11 @@ signed main()
     freopen("Rating_for_iter.deprecated","w",stdout);
     for(int i=1;i<=numberOfStudents;i++) printf("%20s\t%.0lf\n",a[i].s.c_str(),a[i].r);
     freopen("Rating.board","w",stdout);
-    if(debug) cout<<numberOfStudents<<endl;
+    if(displaybots) cout<<numberOfStudents<<endl;
     else cout<<numberOfStudents-10<<endl;
     for(int i=1;i<=numberOfStudents;i++) 
     {
-        if((!debug)&&a[i].s.substr(0,3)=="bot") continue;
+        if((!displaybots)&&a[i].s.substr(0,3)=="bot") continue;
         printf("%s %.0lf %.0lf %.0lf %.0lf %.2lf\n"
             ,a[i].s.c_str(),double(int(a[i].oR)),double(int(a[i].r)),double((int)a[i].r-(int)a[i].oR),a[i].perf,a[i].seed);
     }
@@ -192,7 +191,7 @@ signed main()
     node b[MXN];
     for(int i=1;i<=tototot;i++)
     {
-        if((!debug)&&a[i].s.substr(0,3)=="bot") continue;
+        if((!displaybots)&&a[i].s.substr(0,3)=="bot") continue;
         // b=history[i];
         auto *b=history[i];
         for(int j=1;j<=numberOfStudents;j++) 
@@ -203,10 +202,10 @@ signed main()
             if(b[j].perf<=-1e5) historyRating[i][j]=-1e5;
         }
     }int lt=initRating;
-    return 0; // // // // // // // // // // /// // // // / // // /// // // // // // // // // // // // // // // // /
+    if(!generate) return 0; 
     for(int i=1;i<=numberOfStudents;i++)
     {
-        if((!debug)&&studentName[i].substr(0,3)=="bot") continue;
+        if((!displaybots)&&studentName[i].substr(0,3)=="bot") continue;
         system(("mkdir "+studentName[i]).c_str());
         freopen(("./graph_csv/"+studentName[i]+".csv").c_str(),"w",stdout);
         cout<<"Date,Rating\n";
