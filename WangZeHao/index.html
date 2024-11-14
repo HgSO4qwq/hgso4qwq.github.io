@@ -14,9 +14,10 @@
 
             <p style="font-size:22px">  Rating: <b style="color: #03A89E">1356</b></p>
 
-            <p >  Max: <b style="color: #0000FF">Expert, 1400</b></p>
+            <p >  Max: <b style="color: #0000FF">E, 1400</b></p>
 
-        </div>        <div class="grph" style="width: 1200px;margin: auto;">
+        </div>
+        <div class="grph" style="width: 1200px;margin: auto;">
             <canvas id="graph" width="1200" height="570"> </canvas>
             <script>
                 var c = document.getElementById("graph");
@@ -27,16 +28,24 @@
                 var fnt1 = c.getContext("2d");
 
                 ptr1.beginPath();
-                ptr1.fillStyle="#00800085";
-                ptr1.fillRect(25,303.052,1175,246.948);
+                ptr1.fillStyle="#80400085";
+                ptr1.fillRect(25,536.818,1175,13.1818);
                 fnt1.textBaseline = "middle";
                 fnt1.font = "10px Cascadia Code";
                 fnt1.fillStyle="#000000ff";
-                fnt1.fillText(1250,0,303.052);
+                fnt1.fillText(1100,0,536.818);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#00800085";
+                ptr1.fillRect(25,225.13,1175,311.688);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "10px Cascadia Code";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1300,0,225.13);
 
                 ptr1.beginPath();
                 ptr1.fillStyle="#03A89E85";
-                ptr1.fillRect(25,69.2857,1175,233.766);
+                ptr1.fillRect(25,69.2857,1175,155.844);
                 fnt1.textBaseline = "middle";
                 fnt1.font = "10px Cascadia Code";
                 fnt1.fillStyle="#000000ff";
