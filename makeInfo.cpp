@@ -102,7 +102,7 @@ printf("        <div class=\"nag\" style=\"width: %.0lfpx;margin: auto;\">\n",wi
 printf("            <span style=\"font-size:10px;color: %s;\">%s</span>",YouSIR.first.c_str(),YouSIR.second.c_str());printf("\n");
 printf("            <p style=\"font-family: 'Noto Mono';font-size:35px;margin-top: 0em;margin-bottom:0em;color: %s; \"><b>%s</b></p>\n",YouSIR.first.c_str(),Name.c_str());printf("\n");
 printf("            <p style=\"font-size:22px\">  Rating: <b style=\"color: %s\">%.0lf</b></p>\n",YouSIR.first.c_str(),R[n]);printf("\n");
-printf("            <p >  Max: <b style=\"color: %s\">%s, %.0lf</b></p>\n",YouMAXSIR.first.c_str(),YouMAXSIR.second.c_str(),rrrrr);printf("\n");
+printf("            <p >  Max: <b style=\"color: %s\">%s %.0lf</b></p>\n",YouMAXSIR.first.c_str(),YouMAXSIR.second.c_str(),rrrrr);printf("\n");
 printf("        </div>");printf("\n");
 printf("        <div class=\"grph\" style=\"width: %.0lfpx;margin: auto;\">\n",wid);
 printf("            <canvas id=\"graph\" width=\"%.0lf\" height=\"%.0lf\"> </canvas>",wid,heig+20);printf("\n");
