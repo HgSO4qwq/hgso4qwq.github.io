@@ -1,0 +1,110 @@
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./../styles2.css">
+    <link rel="icon" type="image/x-icon" href="./../favicon.png">
+    <title>Toilet Scuffle Rating</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="nag" style="width: 1150px;margin: auto;">
+
+            <span style="font-size:10px;color: #FF0000;">Superman</span>
+            <p style="font-family: 'Noto Mono';font-size:35px;margin-top: 0em;margin-bottom:0em;color: #FF0000; "><b>bot1</b></p>
+
+            <p style="font-size:22px">  Rating: <b style="color: #FF0000">2250</b></p>
+
+            <p >  Max: <b style="color: #FF0000">SM 2250</b></p>
+
+        </div>
+        <div class="grph" style="width: 1200px;margin: auto;">
+            <canvas id="graph" width="1200" height="570"> </canvas>
+            <script>
+                var c = document.getElementById("graph");
+                var pnt1_1 = c.getContext("2d");
+                var pnt1_2 = c.getContext("2d");
+                var ptr1 = c.getContext("2d");
+                var lln1 = c.getContext("2d");
+                var fnt1 = c.getContext("2d");
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#80808085";
+                ptr1.fillRect(25,419,1175,131);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "10px Cascadia Code";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(850,0,419);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#80400085";
+                ptr1.fillRect(25,350.429,1175,68.5714);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "10px Cascadia Code";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1100,0,350.429);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#00800085";
+                ptr1.fillRect(25,295.571,1175,54.8571);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "10px Cascadia Code";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1300,0,295.571);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#03A89E85";
+                ptr1.fillRect(25,268.143,1175,27.4286);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "10px Cascadia Code";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1400,0,268.143);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#0000FF85";
+                ptr1.fillRect(25,227,1175,41.1429);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "10px Cascadia Code";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1550,0,227);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#AA00AA85";
+                ptr1.fillRect(25,172.143,1175,54.8571);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "10px Cascadia Code";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1750,0,172.143);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#FF8C0085";
+                ptr1.fillRect(25,117.286,1175,54.8571);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "10px Cascadia Code";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1950,0,117.286);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#FF000085";
+                ptr1.fillRect(25,0,1175,117.286);
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(60,515,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(60,515,2.6,0,360,0);pnt1_2.fill();
+
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(1175,35,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(1175,35,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(60,515);
+                lln1.lineTo(1175,35);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+
+
+
+            </script> 
+        </div>
+    </div>
+</body>
+    
