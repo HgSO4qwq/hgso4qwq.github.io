@@ -65,33 +65,38 @@ signed main()
 
         tototot++;cerr<<tototot<<endl;
         cin>>Date[tototot]>>shhh[tototot];int TP=0;
-        int pt=0,diffpbs=0,lt=0;cout<<"num: "<<curNumStudents<<endl;
+        int pt=0,diffpbs=0;double lt=0;cout<<"num: "<<curNumStudents<<endl;
         for(int i=1;i<=curNumStudents;i++)
         {
             string studentName;
             int Score;double Rank;
             cin>>Rank>>studentName;
+            cout<<Rank<<' '<<studentName<<endl;
             if(studentName=="ShiYunHao09") {continue;}
             if(Rank==lt) paimon[diffpbs].push_back(studentName);
             else paimon[++diffpbs].push_back(studentName);
+            lt=Rank;
         }
         int rL=0,rR=0;curNumStudents=0;
+        int sid=0;
         for(int i=1;i<=diffpbs;i++)
         {
             rL=rR+1;
             rR=rL+paimon[i].size()-1;
             curNumStudents+=paimon[i].size();
             string studentName;
-            double avrk=(rL+rR)/2;
+            double avrk=1.0*(rL+rR)/2.0;
+            cout<<rL<<' '<<rR<<endl;
             for(auto u:paimon[i])
             {
+                sid++;
                 studentName=u;
                 double Rank=avrk;
                 cout<<Rank<<' '<<studentName<<endl;
                 int idOfStudent=studentNumber[studentName];
-                isInContest[idOfStudent]=i;
-                contestNumber[i]=idOfStudent;
-                curContestRank[i]=Rank;
+                isInContest[idOfStudent]=sid;
+                contestNumber[sid]=idOfStudent;
+                curContestRank[sid]=Rank;
             }
             paimon[i].clear();
         }
