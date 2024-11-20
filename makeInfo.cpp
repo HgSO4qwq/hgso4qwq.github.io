@@ -79,7 +79,7 @@ int main(int argc,char *argv[])
     lim[++Llim]={1400,1550,"#0000FF85","#0000FF","Expert","E"};
     lim[++Llim]={1550,1700,"#AA00AA85","#AA00AA","Candidate Mastar","CM"};
     lim[++Llim]={1700,1850,"#FF8C0085","#FF8C00","Mastar","M"};
-    lim[++Llim]={1850,1950,"#FF8C00AA","#FF8C00","Mastarstar","M"};
+    lim[++Llim]={1850,1950,"#FF8C00AA","#FF8C00","Mastarman","IM"};
     lim[++Llim]={1950,2550,"#FF000085","#FF0000","Superman","SM"};
     pair<string,string> YouSIR,YouMAXSIR;C=Llim;
     for(int i=1;i<=Llim;i++) if(lim[i].L<=R[n]&&R[n]<=lim[i].R) YouSIR={lim[i].c2,lim[i].rnknm};
