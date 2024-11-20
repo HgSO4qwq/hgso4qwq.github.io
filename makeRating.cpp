@@ -8,6 +8,7 @@ using namespace std;
 #define displaybots 0
 #define onlythefirstcontest 0
 #define generate 1
+#define nodisplaygone 1
 
 const int MXN=110;
 map<string,int> studentNumber;
@@ -51,7 +52,7 @@ signed main()
     }
     freopen("Rating.out","w",stdout);
     cin>>Date[0]>>shhh[0];
-    int T=1e6;
+    int T=1e6;int died=2;// -------------------------------------------  cslD  -------------------------------------------------
     if(onlythefirstcontest) T=1;
     while(cin>>curNumStudents&&T--)
     {
@@ -73,6 +74,7 @@ signed main()
             cin>>Rank>>studentName;
             cout<<Rank<<' '<<studentName<<endl;
             if(studentName=="ShiYunHao09") {continue;}
+            if(studentName=="liqingyang") {continue;}
             if(Rank==lt) paimon[diffpbs].push_back(studentName);
             else paimon[++diffpbs].push_back(studentName);
             lt=Rank;
@@ -191,13 +193,15 @@ signed main()
     freopen("Rating_for_iter.deprecated","w",stdout);
     for(int i=1;i<=numberOfStudents;i++) printf("%20s\t%.0lf\n",a[i].s.c_str(),a[i].r);
     freopen("Rating.board","w",stdout);
-    if(displaybots) cout<<numberOfStudents<<endl;
-    else cout<<numberOfStudents-10<<endl;
+    if(displaybots) cout<<numberOfStudents-died<<endl;
+    else cout<<numberOfStudents-10-died<<endl;
     for(int i=1;i<=numberOfStudents;i++) 
     {
         if((!displaybots)&&a[i].s.substr(0,3)=="bot") continue;
+        if(nodisplaygone&&a[i].s=="liqingyang") continue;
+        if(nodisplaygone&&a[i].s=="ShiYunHao09") continue;
         printf("%s %.0lf %.0lf %.0lf %.0lf %.2lf\n"
-            ,a[i].s.c_str(),double(int(a[i].oR)),double(int(a[i].r)),double((int)a[i].r-(int)a[i].oR),a[i].perf,a[i].seed);
+            ,a[i].s.c_str(),double(int(a[i].oR+0.5)),double(int(a[i].r+0.5)),double((int)(a[i].r+0.5)-(int)(a[i].oR+0.5)),a[i].perf,a[i].seed);
     }
     // tototot--;
     cout<<tototot<<endl;
@@ -211,7 +215,7 @@ signed main()
             // cout<<b[j].r<<' ';
             if((!displaybots)&&b[j].s.substr(0,3)=="bot") continue;
             printf("%s %.0lf %.0lf %.0lf %.0lf %.2lf\n"
-            ,b[j].s.c_str(),double(int(b[j].oR)),double(int(b[j].r)),double((int)b[j].r-(int)b[j].oR),b[j].perf,b[j].seed);
+            ,b[j].s.c_str(),double(int(b[j].oR+0.5)),double(int(b[j].r+0.5)),double((int)(b[j].r+0.5)-(int)(b[j].oR+0.5)),b[j].perf,b[j].seed);
             historyRating[i][j]=b[j].r;
             if(b[j].perf<=-1e5) historyRating[i][j]=-1e5;
         }
@@ -238,7 +242,7 @@ signed main()
             auto *b=history[i];
             if(historyRating[i][j]<=-1e5) continue;
             if(lt2==0) {cout<<"1400 "<<Date[i-1]<<' '<<shhh[i-1]<<endl;lt2=1;}
-            if(lt2) printf("%.0lf %s %lld\n",double(int(b[j].r)),Date[i].c_str(),shhh[i]);
+            if(lt2) printf("%.3lf %s %lld\n",double(int(b[j].r+0.5)),Date[i].c_str(),shhh[i]);
         }
     }
     int lt=initRating;
@@ -246,6 +250,8 @@ signed main()
     for(int i=1;i<=numberOfStudents;i++)
     {
         if((!displaybots)&&studentName[i].substr(0,3)=="bot") continue;
+        if(nodisplaygone&&studentName[i]=="liqingyang") continue;
+        if(nodisplaygone&&studentName[i]=="ShiYunHao09") continue;
         system(("mkdir "+studentName[i]).c_str());
         cout<<"Date,Rating\n";
         int lt=1400,lt2=0;
