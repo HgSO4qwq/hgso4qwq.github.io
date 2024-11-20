@@ -39,10 +39,10 @@ string Ratcol(int x)
     // if(x<=1050) return "<td style=\"text-align: center;\"><span style=\"color:green;font-size: 15px;\">"+to_string(x)+"</span></td>";
          if(x< 900)    return "<td style=\"text-align: center;\"><span style=\"color:#808080;font-size: 15px;\">"+to_string(x)+"</span></td>\n";
     else if(x<1100)    return "<td style=\"text-align: center;\"><span style=\"color:#804000;font-size: 15px;\">"+to_string(x)+"</span></td>\n";
-    else if(x<1300)    return "<td style=\"text-align: center;\"><span style=\"color:#008000;font-size: 15px;\">"+to_string(x)+"</span></td>\n";
+    else if(x<1250)    return "<td style=\"text-align: center;\"><span style=\"color:#008000;font-size: 15px;\">"+to_string(x)+"</span></td>\n";
     else if(x<1400)    return "<td style=\"text-align: center;\"><span style=\"color:#03A89E;font-size: 15px;\">"+to_string(x)+"</span></td>\n";
     else if(x<1550)    return "<td style=\"text-align: center;\"><span style=\"color:#0000FF;font-size: 15px;\">"+to_string(x)+"</span></td>\n";
-    else if(x<1750)    return "<td style=\"text-align: center;\"><span style=\"color:#AA00AA;font-size: 15px;\">"+to_string(x)+"</span></td>\n";
+    else if(x<1700)    return "<td style=\"text-align: center;\"><span style=\"color:#AA00AA;font-size: 15px;\">"+to_string(x)+"</span></td>\n";
     else if(x<1950)    return "<td style=\"text-align: center;\"><span style=\"color:#FF8C00;font-size: 15px;\">"+to_string(x)+"</span></td>\n";
     else                return "<td style=\"text-align: center;\"><span style=\"color:#FF0000;font-size: 15px;\">"+to_string(x)+"</span></td>\n";
 }
