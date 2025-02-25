@@ -1,0 +1,240 @@
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./../styles2.css">
+    <link rel="icon" type="image/x-icon" href="./../favicon.png">
+    <title>Toilet Scuffle Rating</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="nag" style="width: 1150px;margin: auto;">
+
+            <span style="font-size:10px;color: #03A89E;">Specialist</span>
+            <p style="font-family: 'Noto Mono';font-size:35px;margin-top: 0em;margin-bottom:0em;color: #03A89E; "><b>ChenXiao</b></p>
+
+            <p style="font-size:22px">  Rating: <b style="color: #03A89E">1354</b></p>
+
+            <p >  Max: <b style="color: #0000FF">E 1457</b></p>
+
+        </div>
+        <div class="grph" style="width: 1200px;margin: auto;">
+            <canvas id="graph" width="1200" height="570"> </canvas>
+            <script>
+                var c = document.getElementById("graph");
+                var pnt1_1 = c.getContext("2d");
+                var pnt1_2 = c.getContext("2d");
+                var ptr1 = c.getContext("2d");
+                var lln1 = c.getContext("2d");
+                var fnt1 = c.getContext("2d");
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#00800085";
+                ptr1.fillRect(25,429.286,1175,120.714);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "10px Cascadia Code";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1250,0,429.286);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#03A89E85";
+                ptr1.fillRect(25,143.571,1175,285.714);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "10px Cascadia Code";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1400,0,143.571);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#0000FF85";
+                ptr1.fillRect(25,0,1175,143.571);
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(60,143.571,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(60,143.571,2.6,0,360,0);pnt1_2.fill();
+
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(95.9677,318.81,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(95.9677,318.81,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(60,143.571);
+                lln1.lineTo(95.9677,318.81);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(167.903,402.619,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(167.903,402.619,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(95.9677,318.81);
+                lln1.lineTo(167.903,402.619);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(329.758,425.476,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(329.758,425.476,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(167.903,402.619);
+                lln1.lineTo(329.758,425.476);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(365.726,478.81,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(365.726,478.81,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(329.758,425.476);
+                lln1.lineTo(365.726,478.81);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(419.677,515,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(419.677,515,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(365.726,478.81);
+                lln1.lineTo(419.677,515);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(455.645,276.905,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(455.645,276.905,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(419.677,515);
+                lln1.lineTo(455.645,276.905);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(581.532,455.952,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(581.532,455.952,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(455.645,276.905);
+                lln1.lineTo(581.532,455.952);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(671.452,368.333,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(671.452,368.333,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(581.532,455.952);
+                lln1.lineTo(671.452,368.333);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(707.419,347.381,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(707.419,347.381,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(671.452,368.333);
+                lln1.lineTo(707.419,347.381);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(761.371,286.429,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(761.371,286.429,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(707.419,347.381);
+                lln1.lineTo(761.371,286.429);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(797.339,35,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(797.339,35,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(761.371,286.429);
+                lln1.lineTo(797.339,35);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(833.306,259.762,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(833.306,259.762,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(797.339,35);
+                lln1.lineTo(833.306,259.762);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(923.226,73.0952,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(923.226,73.0952,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(833.306,259.762);
+                lln1.lineTo(923.226,73.0952);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(959.194,132.143,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(959.194,132.143,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(923.226,73.0952);
+                lln1.lineTo(959.194,132.143);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(1013.15,250.238,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(1013.15,250.238,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(959.194,132.143);
+                lln1.lineTo(1013.15,250.238);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(1049.11,379.762,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(1049.11,379.762,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(1013.15,250.238);
+                lln1.lineTo(1049.11,379.762);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(1085.08,356.905,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(1085.08,356.905,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(1049.11,379.762);
+                lln1.lineTo(1085.08,356.905);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFE900";pnt1_1.arc(1175,231.19,4.2,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(1175,231.19,2.6,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFE900";
+                lln1.moveTo(1085.08,356.905);
+                lln1.lineTo(1175,231.19);
+                lln1.lineWidth=1.4;
+                lln1.stroke();
+
+
+
+            </script> 
+        </div>
+    </div>
+</body>
+    

@@ -1,0 +1,72 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="./../../styles2.css">
+    <link rel="icon" type="image/x-icon" href="./../../favicon.png">
+    <title>Toilet Scuffle Rating</title>
+</head>
+<body>
+    <div class="header">
+        <div class="nag" style="width: 1395px;margin: auto;">
+
+            <span style="font-size:10px;color: #0000FF;">Expert</span>
+            <p style="font-family: 'Noto Mono';font-size:35px;margin-top: 0em;margin-bottom:0em;color: #0000FF; "><b>PengZiHan</b></p>
+
+            <p style="font-size:22px">  Rating: <b style="color: #0000FF">1480</b></p>
+
+            <p >  Max: <b style="color: #0000FF">E 1480</b></p>
+
+        </div>
+        <div class="grph" style="width: 1400px;margin: auto;">
+            <canvas id="graph" width="14000" height="6700"  style="width: 1400px; height: 670px;"> </canvas>
+            <script>
+                var c = document.getElementById("graph");
+                var pnt1_1 = c.getContext("2d");
+                var pnt1_2 = c.getContext("2d");
+                var ptr1 = c.getContext("2d");
+                var lln1 = c.getContext("2d");
+                var fnt1 = c.getContext("2d");
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#03A89E85";
+                ptr1.fillRect(250,5808.82,13750,691.176);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "100px Lato";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1400,0,5808.82);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#0000FF85";
+                ptr1.fillRect(250,691.176,13750,5117.65);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "100px Lato";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1550,0,691.176);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#AA00AA85";
+                ptr1.fillRect(250,0,13750,691.176);
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(7175,3079.41,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(7175,3079.41,21,0,360,0);pnt1_2.fill();
+
+            </script> 
+        </div>
+        <div class="participated" style="width: 1395px; margin: auto">
+            <p style="font-size: 20px"> <b>List of participated contests: </b></p>
+            <table style="width: 840px">
+                <thead>
+                    <tr>
+                        <th colspan="1"> Contest ID </th>
+                        <th colspan="1"> Name </th>
+                        <th colspan="1"> Old Rating </th>
+                        <th colspan="1"> New Rating </th>
+                        <th colspan="1">  Rank  </th>
+                        <th colspan="1"> Δ </th>
+                        <th colspan="1"> Perf </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

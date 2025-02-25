@@ -1,0 +1,156 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="./../../styles2.css">
+    <link rel="icon" type="image/x-icon" href="./../../favicon.png">
+    <title>Toilet Scuffle Rating</title>
+</head>
+<body>
+    <div class="header">
+        <div class="nag" style="width: 1395px;margin: auto;">
+
+            <span style="font-size:10px;color: #008000;">Pupil</span>
+            <p style="font-family: 'Noto Mono';font-size:35px;margin-top: 0em;margin-bottom:0em;color: #008000; "><b>YanHongXu</b></p>
+
+            <p style="font-size:22px">  Rating: <b style="color: #008000">1231</b></p>
+
+            <p >  Max: <b style="color: #0000FF">E 1440</b></p>
+
+        </div>
+        <div class="grph" style="width: 1400px;margin: auto;">
+            <canvas id="graph" width="14000" height="6700"  style="width: 1400px; height: 670px;"> </canvas>
+            <script>
+                var c = document.getElementById("graph");
+                var pnt1_1 = c.getContext("2d");
+                var pnt1_2 = c.getContext("2d");
+                var ptr1 = c.getContext("2d");
+                var lln1 = c.getContext("2d");
+                var fnt1 = c.getContext("2d");
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#00800085";
+                ptr1.fillRect(250,5815.05,13750,684.954);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "100px Lato";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1250,0,5815.05);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#03A89E85";
+                ptr1.fillRect(250,3170.67,13750,2644.38);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "100px Lato";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1400,0,3170.67);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#0000FF85";
+                ptr1.fillRect(250,526.292,13750,2644.38);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "100px Lato";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1550,0,526.292);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#AA00AA85";
+                ptr1.fillRect(250,0,13750,526.292);
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(600.005,2465.5,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(600.005,2465.5,21,0,360,0);pnt1_2.fill();
+
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(7613.33,4140.27,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(7613.33,4140.27,21,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFCF00";
+                lln1.moveTo(620.431,2470.38);
+                lln1.lineTo(7592.91,4135.4);
+                lln1.lineWidth=2.8*10;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(10243.3,5004.1,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(10243.3,5004.1,21,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFCF00";
+                lln1.moveTo(7633.28,4146.83);
+                lln1.lineTo(10223.4,4997.55);
+                lln1.lineWidth=2.8*10;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(10681.7,5021.73,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(10681.7,5021.73,21,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFCF00";
+                lln1.moveTo(10264.3,5004.95);
+                lln1.lineTo(10660.7,5020.89);
+                lln1.lineWidth=2.8*10;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(13750,6150,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(13750,6150,21,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFCF00";
+                lln1.moveTo(10701.4,5028.98);
+                lln1.lineTo(13730.3,6142.75);
+                lln1.lineWidth=2.8*10;
+                lln1.stroke();
+            </script> 
+        </div>
+        <div class="participated" style="width: 1395px; margin: auto">
+            <p style="font-size: 20px"> <b>List of participated contests: </b></p>
+            <table style="width: 840px">
+                <thead>
+                    <tr>
+                        <th colspan="1"> Contest ID </th>
+                        <th colspan="1"> Name </th>
+                        <th colspan="1"> Old Rating </th>
+                        <th colspan="1"> New Rating </th>
+                        <th colspan="1">  Rank  </th>
+                        <th colspan="1"> Δ </th>
+                        <th colspan="1"> Perf </th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/102">102</a></span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/102">250208 CSPRO</a></span></td>
+<td style="text-align: center;"><span style="color:#0000FF;font-size: 15px;">1440</span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1345</span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;">17</span></td>
+<td style="text-align: center;"><span style="color:red;font-size: 15px;">-95</span></td>
+<td style="text-align: center;"><span style="color:#808080;font-size: 15px;">-50</span></td>
+                </tr>
+                <tr>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/103">103</a></span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/103">HgSO4 Round 6</a></span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1345</span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1296</span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;">16</span></td>
+<td style="text-align: center;"><span style="color:red;font-size: 15px;">-49</span></td>
+<td style="text-align: center;"><span style="color:#008000;font-size: 15px;">1123</span></td>
+                </tr>
+                <tr>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/104">104</a></span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/104">250215 CSPRO</a></span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1296</span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1295</span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;">11</span></td>
+<td style="text-align: center;"><span style="color:red;font-size: 15px;">-1</span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1290</span></td>
+                </tr>
+                <tr>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/105">105</a></span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/105">ACM 4 Hours 10 Tasks 1</a></span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1295</span></td>
+<td style="text-align: center;"><span style="color:#008000;font-size: 15px;">1231</span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;">21</span></td>
+<td style="text-align: center;"><span style="color:red;font-size: 15px;">-64</span></td>
+<td style="text-align: center;"><span style="color:#804000;font-size: 15px;">963</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
