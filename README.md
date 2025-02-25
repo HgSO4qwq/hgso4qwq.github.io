@@ -1,1 +1,1 @@
-![Here!](./rating)
+[Here!](./rating)
