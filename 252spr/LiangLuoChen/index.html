@@ -1,0 +1,101 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="./../../styles2.css">
+    <link rel="icon" type="image/x-icon" href="./../../favicon.png">
+    <title>Toilet Scuffle Rating</title>
+</head>
+<body>
+    <div class="header">
+        <div class="rnag" style="width: 55px;margin: auto;text-align: center;float: left;">
+            <div class="nag1" style="margin: auto;width: 55px;margin-bottom: 20px;">
+                <span ><a href="./../../rating" style="color:black;font-size: 15px;"><img src=./../../home.png></a></span>
+            </div>
+            <div class="nag1" style="margin: auto;width: 55px;margin-bottom: 20px;">
+                <span ><a href="./../contest" style="color:black;font-size: 15px;"><img src=./../../contest.png></a></span>
+            </div>
+            <div class="nag1" style="margin: auto;width: 55px;margin-bottom: 20px;">
+                <span ><a href="./../" style="color:black;font-size: 15px;"><img src=./../../users.png></a></span>
+            </div>
+        </div>
+        <div class="nag" style="width: 995px;margin: auto;">
+
+            <span style="font-size:10px;color: #008000;">Pupil</span>
+            <p style="font-family: 'Noto Mono';font-size:35px;margin-top: 0em;margin-bottom:0em;color: #008000; "><b>LiangLuoChen</b></p>
+
+            <p style="font-size:22px">  Rating: <b style="color: #008000">1334</b></p>
+
+            <p >  Max: <b style="color: #03A89E">S 1480</b></p>
+
+        </div>
+        <div class="grph" style="width: 1000px;margin: auto;">
+            <canvas id="graph" width="10000" height="5100"  style="width: 1000px; height: 510px;"> </canvas>
+            <script>
+                var c = document.getElementById("graph");
+                var pnt1_1 = c.getContext("2d");
+                var pnt1_2 = c.getContext("2d");
+                var ptr1 = c.getContext("2d");
+                var lln1 = c.getContext("2d");
+                var fnt1 = c.getContext("2d");
+                ptr1.beginPath();
+                ptr1.fillStyle="#00800085";
+                ptr1.fillRect(250,3545.65,9750,1354.35);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "100px Lato";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1400,0,3545.65);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#03A89E85";
+                ptr1.fillRect(250,502.174,9750,3043.48);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "100px Lato";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1600,0,502.174);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#0000FF85";
+                ptr1.fillRect(250,0,9750,502.174);
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(600.053,2328.26,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(600.053,2328.26,21,0,360,0);pnt1_2.fill();
+
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(9749.95,4550,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(9749.95,4550,21,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFCF00";
+                lln1.moveTo(620.46,2333.22);
+                lln1.lineTo(9729.54,4545.04);
+                lln1.lineWidth=2.8*10;
+                lln1.stroke();
+            </script> 
+        </div>
+        <div class="participated" style="width: 995px; margin: auto">
+            <p style="font-size: 20px"> <b>List of participated contests: </b></p>
+            <table style="width: 880px">
+                <thead>
+                    <tr>
+                        <th colspan="1"> Contest ID </th>
+                        <th colspan="1"> Name </th>
+                        <th colspan="1"> Old Rating </th>
+                        <th colspan="1"> New Rating </th>
+                        <th colspan="1">  Rank  </th>
+                        <th colspan="1"> Δ </th>
+                        <th colspan="1"> Perf </th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/1">1</a></span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/1">250123 CSPRO</a></span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1480</span></td>
+<td style="text-align: center;"><span style="color:#008000;font-size: 15px;">1334</span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;">19</span></td>
+<td style="text-align: center;"><span style="color:red;font-size: 15px;">-146</span></td>
+<td style="text-align: center;"><span style="color:#808080;font-size: 15px;">511</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,158 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="./../../styles2.css">
+    <link rel="icon" type="image/x-icon" href="./../../favicon.png">
+    <title>Toilet Scuffle Rating</title>
+</head>
+<body>
+    <div class="header">
+        <div class="rnag" style="width: 55px;margin: auto;text-align: center;float: left;">
+            <div class="nag1" style="margin: auto;width: 55px;margin-bottom: 20px;">
+                <span ><a href="./../../rating" style="color:black;font-size: 15px;"><img src=./../../home.png></a></span>
+            </div>
+            <div class="nag1" style="margin: auto;width: 55px;margin-bottom: 20px;">
+                <span ><a href="./../contest" style="color:black;font-size: 15px;"><img src=./../../contest.png></a></span>
+            </div>
+            <div class="nag1" style="margin: auto;width: 55px;margin-bottom: 20px;">
+                <span ><a href="./../" style="color:black;font-size: 15px;"><img src=./../../users.png></a></span>
+            </div>
+        </div>
+        <div class="nag" style="width: 995px;margin: auto;">
+
+            <span style="font-size:10px;color: #008000;">Pupil</span>
+            <p style="font-family: 'Noto Mono';font-size:35px;margin-top: 0em;margin-bottom:0em;color: #008000; "><b>YuanHaoYan</b></p>
+
+            <p style="font-size:22px">  Rating: <b style="color: #008000">1325</b></p>
+
+            <p >  Max: <b style="color: #03A89E">S 1480</b></p>
+
+        </div>
+        <div class="grph" style="width: 1000px;margin: auto;">
+            <canvas id="graph" width="10000" height="5100"  style="width: 1000px; height: 510px;"> </canvas>
+            <script>
+                var c = document.getElementById("graph");
+                var pnt1_1 = c.getContext("2d");
+                var pnt1_2 = c.getContext("2d");
+                var ptr1 = c.getContext("2d");
+                var lln1 = c.getContext("2d");
+                var fnt1 = c.getContext("2d");
+                ptr1.beginPath();
+                ptr1.fillStyle="#00800085";
+                ptr1.fillRect(250,3444.74,9750,1455.26);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "100px Lato";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1400,0,3444.74);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#03A89E85";
+                ptr1.fillRect(250,497.368,9750,2947.37);
+                fnt1.textBaseline = "middle";
+                fnt1.font = "100px Lato";
+                fnt1.fillStyle="#000000ff";
+                fnt1.fillText(1600,0,497.368);
+
+                ptr1.beginPath();
+                ptr1.fillStyle="#0000FF85";
+                ptr1.fillRect(250,0,9750,497.368);
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(600.001,2265.79,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(600.001,2265.79,21,0,360,0);pnt1_2.fill();
+
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(6090,2560.53,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(6090,2560.53,21,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFCF00";
+                lln1.moveTo(620.971,2266.92);
+                lln1.lineTo(6069.03,2559.4);
+                lln1.lineWidth=2.8*10;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(6730.5,3223.68,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(6730.5,3223.68,21,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFCF00";
+                lln1.moveTo(6104.59,2575.63);
+                lln1.lineTo(6715.91,3208.58);
+                lln1.lineWidth=2.8*10;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(8011.5,3002.63,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(8011.5,3002.63,21,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFCF00";
+                lln1.moveTo(6751.19,3220.11);
+                lln1.lineTo(7990.81,3006.2);
+                lln1.lineWidth=2.8*10;
+                lln1.stroke();
+                pnt1_1.beginPath();pnt1_1.fillStyle = "#FFCF00";pnt1_1.arc(9750,4550,45,0,360,0);pnt1_1.fill();
+
+                pnt1_2.beginPath();pnt1_2.fillStyle = "#ffffff";pnt1_2.arc(9750,4550,21,0,360,0);pnt1_2.fill();
+
+                lln1.beginPath();
+                lln1.strokeStyle="#FFCF00";
+                lln1.moveTo(8027.19,3016.59);
+                lln1.lineTo(9734.31,4536.04);
+                lln1.lineWidth=2.8*10;
+                lln1.stroke();
+            </script> 
+        </div>
+        <div class="participated" style="width: 995px; margin: auto">
+            <p style="font-size: 20px"> <b>List of participated contests: </b></p>
+            <table style="width: 880px">
+                <thead>
+                    <tr>
+                        <th colspan="1"> Contest ID </th>
+                        <th colspan="1"> Name </th>
+                        <th colspan="1"> Old Rating </th>
+                        <th colspan="1"> New Rating </th>
+                        <th colspan="1">  Rank  </th>
+                        <th colspan="1"> Δ </th>
+                        <th colspan="1"> Perf </th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/9">9</a></span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/9">TWOI Round 1</a></span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1480</span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1460</span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;">17</span></td>
+<td style="text-align: center;"><span style="color:red;font-size: 15px;">-20</span></td>
+<td style="text-align: center;"><span style="color:#808080;font-size: 15px;">898</span></td>
+                </tr>
+                <tr>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/10">10</a></span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/10">HBD to HYK</a></span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1460</span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1415</span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;">13</span></td>
+<td style="text-align: center;"><span style="color:red;font-size: 15px;">-45</span></td>
+<td style="text-align: center;"><span style="color:#008000;font-size: 15px;">1285</span></td>
+                </tr>
+                <tr>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/11">11</a></span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/11">Campanula Round 4</a></span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1415</span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1430</span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;">11</span></td>
+<td style="text-align: center;"><span style="color:green;font-size: 15px;">+15</span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1546</span></td>
+                </tr>
+                <tr>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/12">12</a></span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;"><a href="./../contest/12">SO3 Round 1</a></span></td>
+<td style="text-align: center;"><span style="color:#03A89E;font-size: 15px;">1430</span></td>
+<td style="text-align: center;"><span style="color:#008000;font-size: 15px;">1325</span></td>
+<td style="text-align: center;"><span style="color:black;font-size: 15px;">19</span></td>
+<td style="text-align: center;"><span style="color:red;font-size: 15px;">-105</span></td>
+<td style="text-align: center;"><span style="color:#808080;font-size: 15px;">811</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

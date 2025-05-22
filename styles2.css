@@ -1,0 +1,21 @@
+.rnag
+{
+    font-family: 'Cascadia Code' !important;
+    margin: auto !important;
+}
+.nag
+{
+    font-family: 'Cascadia Code' !important;
+    margin: auto !important;
+}
+.participated{
+    font-family: 'Cascadia Code' !important;
+    margin: auto !important;
+}
+
+@font-face {
+    font-family: "Cascadia Code";
+    src: url(./CascadiaCode.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
